@@ -1,4 +1,4 @@
-# 🧠 Sentiment Analysis Aplikasi (Google Play Store Reviews)
+# Sentiment Analysis Aplikasi (Google Play Store Reviews)
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.13-orange)
@@ -10,31 +10,31 @@
 
 ---
 
-## 📘 Ringkasan Proyek
+## Ringkasan Proyek
 
 Proyek ini bertujuan untuk **mengklasifikasikan sentimen pengguna** aplikasi ke dalam tiga kategori:
-- 💚 **Positif**
-- 😐 **Netral**
-- 💢 **Negatif**
+- **Positif**
+- **Netral**
+- **Negatif**
 
 Model dikembangkan menggunakan **Bidirectional Long Short-Term Memory (BiLSTM)** — varian dari LSTM yang unggul dalam memahami konteks dua arah pada teks berurutan.
 
 ---
 
-## 🚀 Pipeline dan Metodologi
+## Pipeline dan Metodologi
 
-### 🗂️ 1. Pengumpulan Data
+### 1. Pengumpulan Data
 - Data dikumpulkan secara **mandiri (self-scraped)** menggunakan library [`google-play-scraper`](https://pypi.org/project/google-play-scraper/).  
 - Dataset terdiri dari **13.428 ulasan valid** pengguna aplikasi.  
 - Dataset dikategorikan ke dalam tiga kelas sentimen: *positif*, *netral*, dan *negatif*.
 
-### 🏷️ 2. Pelabelan & Ekstraksi Fitur
+### 2. Pelabelan & Ekstraksi Fitur
 - Pelabelan dilakukan menggunakan **pendekatan lexicon-based** (berdasarkan jumlah kata positif dan negatif).  
 - Fitur teks diekstraksi menggunakan dua pendekatan:
-  - ⚙️ **Word2Vec** – representasi semantik antar kata  
-  - 🧩 **TF-IDF** – representasi berbasis frekuensi term  
+  - **Word2Vec** – representasi semantik antar kata  
+  - **TF-IDF** – representasi berbasis frekuensi term  
 
-### 🧠 3. Pelatihan Model (Deep Learning)
+### 3. Pelatihan Model (Deep Learning)
 Model utama: **Bidirectional LSTM (BiLSTM)** menggunakan TensorFlow dan Keras.  
 Tiga skema pelatihan dilakukan untuk evaluasi performa model:
 
@@ -44,9 +44,9 @@ Tiga skema pelatihan dilakukan untuk evaluasi performa model:
 | 2 | BiLSTM | TF-IDF | 80/20 | 86.41% | **84.51%** |
 | 3 | BiLSTM | Word2Vec | 70/30 | 97.66% | **93.92%** |
 
-> 🔍 Dua dari tiga skema mencapai akurasi testing di atas 92%, menandakan model memiliki stabilitas dan generalisasi yang baik.
+> Dua dari tiga skema mencapai akurasi testing di atas 92%, menandakan model memiliki stabilitas dan generalisasi yang baik.
 
-## 🧾 Hak Cipta & Penggunaan
+## Hak Cipta & Penggunaan
 
 Proyek ini dibuat untuk tujuan pembelajaran dan submission akademik.  
 Sebagian kode terinspirasi dari berbagai sumber publik, dokumentasi, dan proyek pembelajaran.  
